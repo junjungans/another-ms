@@ -4,11 +4,11 @@ const app = express();
 
 app.use(express.json());
 
-app.get("/sample", (req, res) => {
+app.get("/samples", (req, res) => {
   res.json({ id: "id" });
 });
 
-app.post("/sample", (req, res) => {
+app.post("/samples", (req, res) => {
   res.json({ id: "id" });
 });
 

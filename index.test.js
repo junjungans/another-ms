@@ -14,9 +14,11 @@ describe("another-ms", () => {
       publishVerificationResult: true,
       providerVersion: process.env.GIT_COMMIT,
       providerVersionBranch: process.env.GIT_BRANCH,
+      pactBrokerUsername: 'userTesting',
+      pactBrokerPassword: 'userTestingPassword'
     };
 
-    return new Verifier(opts).verifyProvider().then((output) => {
+    return new Verifier(opts).verifyProvider().finally(() => {
       console.log("Pact Verification Complete!");
       server.close();
     });

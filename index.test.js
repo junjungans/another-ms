@@ -7,8 +7,8 @@ describe("another-ms", () => {
   it("should verify contract", () => {
     const opts = {
       provider: "another-ms",
-      providerBaseUrl: "http://localhost:3000",
-      pactBrokerUrl: "http://localhost:9292",
+      providerBaseUrl: process.env.PROVIDER_URL,
+      pactBrokerUrl: process.env.BROKER_URL,
       enablePending: true,
       consumerVersionSelectors: [{ latest: true }],
       publishVerificationResult: true,

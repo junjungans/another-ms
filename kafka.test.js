@@ -22,7 +22,7 @@ describe('sampleRepository verification', () => {
         provider: 'kafka-another-ms',
         providerVersion: process.env.GIT_COMMIT,
         providerVersionBranch: process.env.GIT_BRANCH,
-        pactBrokerUrl: process.env.PROVIDER_URL,
+        pactBrokerUrl: process.env.BROKER_URL,
         pactBrokerUsername: 'userTesting',
         pactBrokerPassword: 'userTestingPassword',
         publishVerificationResult: true,
